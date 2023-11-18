@@ -21,9 +21,6 @@ jobs:
         uses: pnpm/action-setup@v2.2.2
         with:
           version: 7
-      
-      - name: Install deps
-        run: pnpm install --no-frozen-lockfile
 
       - name: Run SVG generation script
         run: pnpx make-github-contributor-svg -t ${{ secrets.GH_TOKEN }} -o cortip -r isomera
